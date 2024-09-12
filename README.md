@@ -1,4 +1,4 @@
-# A script for BetterDiscord that let's the user customize the color for Usernames in DMs
+# A script for BetterDiscord that lets the user customize the color for Usernames in DMs
 
 ## Have you ever been on a server and enjoyed the colorful chat with your friends? And then you went to your DMs and everyones username was just plain white?
 
