@@ -1,8 +1,7 @@
 # A script for BetterDiscord that lets the user customize the color for Usernames in DMs
 
-## Have you ever been on a server and enjoyed the colorful chat with your friends? And then you went to your DMs and everyones username was just plain white?
 
-This plugin aims to provide a solution for this problem. Once downloaded and installed you can open the plugins settings which will show this window:
+This plugin aims to provide a solution for the problem of colorless private chats. Once downloaded and installed you can open the plugins settings which will show this window:
 
 ![settings1](https://github.com/user-attachments/assets/ea8b8abd-c6d5-4844-b2f9-d650589d56aa)
 
