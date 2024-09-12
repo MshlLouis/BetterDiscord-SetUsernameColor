@@ -28,7 +28,7 @@ module.exports = class ASetUsernameColor {
     applyUsernameColors() {
         if (!this.isInPrivateMessage()) return;
 
-        const usernameSelector = `.username_de3235, .username_f9f2ca`;
+        const usernameSelector = `.username_de3235, .username_f9f2ca, .name_ec8679`;
         const usernameElements = document.querySelectorAll(usernameSelector);
 
         usernameElements.forEach(element => {
@@ -41,7 +41,7 @@ module.exports = class ASetUsernameColor {
     }
 
     resetUsernameColors() {
-        const usernameSelector = `.username_de3235, .username_f9f2ca`;
+        const usernameSelector = `.username_de3235, .username_f9f2ca, .name_ec8679`;
         const usernameElements = document.querySelectorAll(usernameSelector);
 
         usernameElements.forEach(element => {
@@ -99,9 +99,9 @@ module.exports = class ASetUsernameColor {
         addButton.style.marginTop = '10px';
 
         addButton.onclick = () => {
-            this.settings.usernames.push({ name: '', color: 'rgba(252, 186, 3, 1)' });
+            this.settings.usernames.push({ name: '', color: 'rgba(255, 255, 255, 1)' });
             this.saveSettings();
-            panel.appendChild(this.createUsernameInput(panel, '', 'rgba(252, 186, 3, 1)', this.settings.usernames.length - 1));
+            panel.appendChild(this.createUsernameInput(panel, '', 'rgba(255, 255, 255, 1)', this.settings.usernames.length - 1));
         };
 
         panel.appendChild(addButton);
