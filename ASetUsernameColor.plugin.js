@@ -28,7 +28,7 @@ module.exports = class ASetUsernameColor {
     applyUsernameColors() {
         if (!this.isInPrivateMessage()) return;
 
-        const usernameSelector = `.username_de3235, .username_f9f2ca, .name_ec8679`;
+        const usernameSelector = `.username_de3235, .username_f9f2ca, .name_ec8679, .username_f3939d`;
         const usernameElements = document.querySelectorAll(usernameSelector);
 
         usernameElements.forEach(element => {
@@ -41,7 +41,7 @@ module.exports = class ASetUsernameColor {
     }
 
     resetUsernameColors() {
-        const usernameSelector = `.username_de3235, .username_f9f2ca, .name_ec8679`;
+        const usernameSelector = `.username_de3235, .username_f9f2ca, .name_ec8679, .username_f3939d`;
         const usernameElements = document.querySelectorAll(usernameSelector);
 
         usernameElements.forEach(element => {
