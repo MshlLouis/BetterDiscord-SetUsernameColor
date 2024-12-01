@@ -28,12 +28,19 @@ module.exports = class ASetUsernameColor {
     applyUsernameColors() {
         if (!this.isInPrivateMessage()) return;
 
-        const usernameSelector = `.username_de3235, .username_f9f2ca, .name_ec8679, .username_f3939d`;
+        const usernameSelector = `.username_de3235, .username_f9f2ca, .overflow_a82120, .username_f3939d`;
         const usernameElements = document.querySelectorAll(usernameSelector);
 
         usernameElements.forEach(element => {
+            const span = element.querySelector(`.chipletContainerInner_d5cb59`);
+            let username = element.textContent.trim();
+
+            if (span) {
+                username = username.replace(span.textContent.trim(), '').trim();
+            }
+
             this.settings.usernames.forEach(user => {
-                if (element.textContent === user.name) {
+                if (username === user.name) {
                     element.style.color = user.color;
                 }
             });
@@ -41,12 +48,19 @@ module.exports = class ASetUsernameColor {
     }
 
     resetUsernameColors() {
-        const usernameSelector = `.username_de3235, .username_f9f2ca, .name_ec8679, .username_f3939d`;
+        const usernameSelector = `.username_de3235, .username_f9f2ca, .overflow_a82120, .username_f3939d`;
         const usernameElements = document.querySelectorAll(usernameSelector);
 
         usernameElements.forEach(element => {
+            const span = element.querySelector(`.chipletContainerInner_d5cb59`);
+            let username = element.textContent.trim();
+
+            if (span) {
+                username = username.replace(span.textContent.trim(), '').trim();
+            }
+
             this.settings.usernames.forEach(user => {
-                if (element.textContent === user.name) {
+                if (username === user.name) {
                     element.style.color = '';
                 }
             });
