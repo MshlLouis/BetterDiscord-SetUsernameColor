@@ -28,11 +28,11 @@ module.exports = class ASetUsernameColor {
     applyUsernameColors() {
         if (!this.isInPrivateMessage()) return;
 
-        const usernameSelector = `.username_de3235, .username_f9f2ca, .overflow_a82120, .username_f3939d`;
+        const usernameSelector = `.username_c19a55, .username__703b9, .overflow__82b15, .username__0a06e`;
         const usernameElements = document.querySelectorAll(usernameSelector);
 
         usernameElements.forEach(element => {
-            const span = element.querySelector(`.chipletContainerInner_d5cb59`);
+            const span = element.querySelector(`.chipletContainerInner__4a25c`);
             let username = element.textContent.trim();
 
             if (span) {
@@ -48,11 +48,11 @@ module.exports = class ASetUsernameColor {
     }
 
     resetUsernameColors() {
-        const usernameSelector = `.username_de3235, .username_f9f2ca, .overflow_a82120, .username_f3939d`;
+        const usernameSelector = `.username_c19a55, .username__703b9, .overflow__82b15, .username__0a06e`;
         const usernameElements = document.querySelectorAll(usernameSelector);
 
         usernameElements.forEach(element => {
-            const span = element.querySelector(`.chipletContainerInner_d5cb59`);
+            const span = element.querySelector(`.chipletContainerInner__4a25c`);
             let username = element.textContent.trim();
 
             if (span) {
@@ -80,7 +80,7 @@ module.exports = class ASetUsernameColor {
     }
 
     isInPrivateMessage() {
-        const dmContainer = document.querySelector('.privateChannels_f0963d');
+        const dmContainer = document.querySelector('.privateChannels__35e86');
         return dmContainer !== null;
     }
 
